@@ -7,6 +7,8 @@
     "dev-nodemon": "nodemon --ignore src/js/client --harmony index.js",
     "dev-hot": "webpack-dev-server --config webpack.config.js --progress --color",
     "dev": "node --harmony index.js & npm run dev-hot",
+    "build": "webpack --config webpack.config.production.js",
+    "start": "npm run build && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
